@@ -2,7 +2,7 @@
 Sample exercises for Klaviyo
 
 
-General Questions:
+##General Questions:
 
 1. what browser level of support will we need?
 2. Are there any specific routes that we need to implement?
@@ -10,23 +10,20 @@ General Questions:
 
 
 
-Initial Brainstorming Design:
-Model Design
+##Initial Brainstorming Design:
+###Model Design
 
+* email = Collection of emailItems
+* emailItem = Model
+  * emailItem properties have:
+    * position
+    * type 
 
-  email = Collection of emailItems
-
-
-  emailItem = Model
-    emailItem properties have:
-      - position
-      - type 
-
-    emailItem methods have:
-      - moveTo ( integer )
-        This will change the position property
+  * emailItem methods have:
+    * moveTo ( integer )
+      This will change the position property
 
 
 
 
-- phase 2 would be to extend the emailItems for buttons/text/image/spacers
+Phase 2 would be to extend the emailItems for buttons/text/image/spacers

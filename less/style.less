@@ -1,0 +1,135 @@
+
+@primary-color: #1d365d;
+@accent-color: @primary-color - #111;
+
+@border-color: #666;
+@border-accent-color: #ccc;
+
+
+@base-unit: 15px;
+
+@header-offset: 50px;
+@footer-offset: 50px;
+
+@body-height: 700px;
+@iframe-height: 1200px;
+@preview-height: 600px;
+
+@menu-width: 350px;
+ 
+
+/* Main Email Wizard Styles */
+.email-wizard {
+  
+  .header {
+    background-color: @accent-color;
+    
+    .navbar {
+      height: @header-offset;
+    }
+ 
+  }  
+
+  .content  {
+    min-height: @body-height;
+
+    .items {
+      border: 1px solid @border-color;
+      bottom: @footer-offset;
+      left: 0;
+      padding: @base-unit;
+      padding-bottom: 0;
+      position: absolute;
+      top: @header-offset;
+      width: @menu-width;
+
+      .item {
+        cursor: pointer;
+        display: table;
+        margin-bottom: @base-unit;
+
+        div {
+          border: 1px solid @border-accent-color;
+          display: table-cell;
+          height: @base-unit * 6;        
+          text-align: center;
+          vertical-align: middle;
+        }
+
+      }
+
+    }
+
+    .preview {
+      bottom: @footer-offset;
+      left: @menu-width;
+      position: absolute;
+      right: 0;
+      top: @header-offset;
+
+      .preview-container {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        .canvas {
+          border: 1px solid @border-color;
+          height: 100%;
+          overflow: visible;
+          width: 100%;
+        }
+      }
+    }
+
+  }
+
+  .footer {
+    background-color: @primary-color;
+    bottom: 0;
+    color: #fff;
+    height: @footer-offset;
+    left: 0;
+    padding-bottom: @base-unit;
+    padding-top: @base-unit;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+}
+
+
+/* Embedded IFRAME Styles */
+.canvas-iframe {
+  background: #ccc;
+  height: @iframe-height;
+
+  .content {
+    background: #fff;
+    min-height: @preview-height;
+    margin: (@base-unit * 3) auto; 
+    padding: @base-unit;
+    width: 700px;
+
+    ul { 
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        border: 1px dashed @border-color;
+        display: block;
+        margin-bottom: @base-unit;
+        padding: @base-unit;
+        position: relative;
+      
+        
+      }
+
+
+    }
+  }
+}

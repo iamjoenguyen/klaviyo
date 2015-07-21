@@ -1,6 +1,7 @@
 /* VARIABLES */
 /* Main Email Wizard Styles */
 .email-wizard {
+  overflow-x: hidden;
   /* HEADER */
   /* MAIN CONTENT */
   /* FOOTER */

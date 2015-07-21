@@ -1,4 +1,5 @@
 
+/* VARIABLES */
 @primary-color: #1d365d;
 @accent-color: @primary-color - #111;
 
@@ -21,6 +22,7 @@
 /* Main Email Wizard Styles */
 .email-wizard {
   
+  /* HEADER */
   .header {
     background-color: @accent-color;
     
@@ -30,36 +32,59 @@
  
   }  
 
+  /* MAIN CONTENT */
   .content  {
     min-height: @body-height;
 
-    .items {
+    /* MENU PANEL */
+    .menu {
       border: 1px solid @border-color;
       bottom: @footer-offset;
       left: 0;
-      padding: @base-unit;
-      padding-bottom: 0;
+      padding: 0;
       position: absolute;
       top: @header-offset;
       width: @menu-width;
 
-      .item {
-        cursor: pointer;
-        display: table;
-        margin-bottom: @base-unit;
+      .items { 
+        margin: 0;
+        padding: 0; 
+        width: 100%;       
 
-        div {
+        .emailItem {
           border: 1px solid @border-accent-color;
-          display: table-cell;
-          height: @base-unit * 6;        
-          text-align: center;
-          vertical-align: middle;
+          cursor: pointer;
+          display: table;
+          float: left;
+          margin: 5%;
+          margin-top: 0;
+          width: 42.5%;
+
+          &:nth-child(1),
+          &:nth-child(2),{
+            margin-top: 5%;
+          }
+
+          &:nth-child(even){
+            margin-left: 0;
+          }
+        
+          p {
+            display: table-cell;
+            height: @base-unit * 6;
+            text-align: center;
+            vertical-align: middle;
+            
+          }
+
         }
+
 
       }
 
     }
 
+    /* PREVIEW PANEL */
     .preview {
       bottom: @footer-offset;
       left: @menu-width;
@@ -85,6 +110,8 @@
 
   }
 
+
+  /* FOOTER */
   .footer {
     background-color: @primary-color;
     bottom: 0;
@@ -124,9 +151,7 @@
         display: block;
         margin-bottom: @base-unit;
         padding: @base-unit;
-        position: relative;
-      
-        
+        position: relative;        
       }
 
 
